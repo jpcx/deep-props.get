@@ -7,7 +7,7 @@ Retrieves a nested property from a data source by iterating over a supplied path
 
 | Name | Type | Attributes | Default | Description |
 | --- | --- | --- | --- | --- |
-| `host` | [deep-props~Host](https://github.com/jpcx/deep-props/blob/0.1.0/docs/global.md#~Host) |  |  | Container to search within. |
+| `host` | [deep-props~Host](https://github.com/jpcx/deep-props/blob/0.2.0/docs/global.md#~Host) |  |  | Container to search within. |
 | `path` | [deep-props.get~Path](https://github.com/jpcx/deep-props.get/blob/0.1.0/docs/global.md#~Path) |  |  | Path to desired property. |
 | `opt` | [deep-props.get~Options](https://github.com/jpcx/deep-props.get/blob/0.1.0/docs/global.md#~Options) | \<optional> | {} | Execution settings. |
 
@@ -21,7 +21,7 @@ Endpoint of path - the result of the search. Target is undefined if not found. I
 
 Type
 
-[deep-props.get~Target](https://github.com/jpcx/deep-props.get/blob/0.1.0/docs/global.md#~Target) | [deep-props~ResultGenerator](https://github.com/jpcx/deep-props/blob/0.1.0/docs/global.md#~ResultGenerator)
+[deep-props.get~Target](https://github.com/jpcx/deep-props.get/blob/0.1.0/docs/global.md#~Target) | [deep-props~ResultGenerator](https://github.com/jpcx/deep-props/blob/0.2.0/docs/global.md#~ResultGenerator)
 
 ##### Examples
 
@@ -95,7 +95,7 @@ for (let step of query) {
 
 <hr>
 
-## [Home](/README.md)
+## [Home](https://github.com/jpcx/deep-props.get/blob/0.1.0/README.md)
 
 ### Modules
 
@@ -104,6 +104,6 @@ for (let step of query) {
 
 ### Namespaces
 
-*   [deep-props](https://github.com/jpcx/deep-props/blob/0.1.0/docs/global.md)
+*   [deep-props](https://github.com/jpcx/deep-props/blob/0.2.0/docs/global.md)
 *   [extract](https://github.com/jpcx/deep-props.extract/blob/0.1.1/docs/global.md)
 *   [get](https://github.com/jpcx/deep-props.get/blob/0.1.0/docs/global.md)

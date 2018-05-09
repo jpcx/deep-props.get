@@ -1,4 +1,4 @@
-# [deep-props](https://github.com/jpcx/deep-props/blob/0.1.0/docs/global.md).get
+# [deep-props](https://github.com/jpcx/deep-props/blob/0.2.0/docs/global.md).get
 
 Source:
 
@@ -16,7 +16,7 @@ Gets a value from a Target behind a Key. Checks getCustomizer first, if it is pr
 | Name | Type | Description |
 | --- | --- | --- |
 | `target` | [deep-props.get~Target](https://github.com/jpcx/deep-props.get/blob/0.1.0/docs/global.md#~Target) | Target object. |
-| `key` | [deep-props~Key](https://github.com/jpcx/deep-props/blob/0.1.0/docs/global.md#~Key) | Access key. |
+| `key` | [deep-props~Key](https://github.com/jpcx/deep-props/blob/0.2.0/docs/global.md#~Key) | Access key. |
 | `opt` | [deep-props.get~Options](https://github.com/jpcx/deep-props.get/blob/0.1.0/docs/global.md#~Options) | Execution settings. |
 
 Source:
@@ -50,7 +50,7 @@ Gets a key from a map, if it exists. Looks for key as key first; if not found, l
 | Name | Type | Description |
 | --- | --- | --- |
 | `target` | [deep-props.get~Target](https://github.com/jpcx/deep-props.get/blob/0.1.0/docs/global.md#~Target) | Target of Key search. |
-| `key` | [deep-props~Key](https://github.com/jpcx/deep-props/blob/0.1.0/docs/global.md#~Key) | Key to find in target. |
+| `key` | [deep-props~Key](https://github.com/jpcx/deep-props/blob/0.2.0/docs/global.md#~Key) | Key to find in target. |
 
 Source:
 
@@ -83,7 +83,7 @@ Checks to see if a Set has a key. If so, returns the key. If not found, looks fo
 | Name | Type | Description |
 | --- | --- | --- |
 | `target` | [deep-props.get~Target](https://github.com/jpcx/deep-props.get/blob/0.1.0/docs/global.md#~Target) | Target of Key search. |
-| `key` | [deep-props~Key](https://github.com/jpcx/deep-props/blob/0.1.0/docs/global.md#~Key) | Key to find in target. |
+| `key` | [deep-props~Key](https://github.com/jpcx/deep-props/blob/0.2.0/docs/global.md#~Key) | Key to find in target. |
 
 Source:
 
@@ -116,7 +116,7 @@ Checks for String objects and properties attached to them. If not, checks for JS
 | Name | Type | Description |
 | --- | --- | --- |
 | `target` | [deep-props.get~Target](https://github.com/jpcx/deep-props.get/blob/0.1.0/docs/global.md#~Target) | Target of Key search. |
-| `key` | [deep-props~Key](https://github.com/jpcx/deep-props/blob/0.1.0/docs/global.md#~Key) | Key to find in target. |
+| `key` | [deep-props~Key](https://github.com/jpcx/deep-props/blob/0.2.0/docs/global.md#~Key) | Key to find in target. |
 
 Source:
 
@@ -165,7 +165,7 @@ Iterates along the supplied path and shifts a reference point along the way.
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `host` | [deep-props~Host](https://github.com/jpcx/deep-props/blob/0.1.0/docs/global.md#~Host) | Base container dataset to search within. |
+| `host` | [deep-props~Host](https://github.com/jpcx/deep-props/blob/0.2.0/docs/global.md#~Host) | Base container dataset to search within. |
 | `path` | [deep-props.get~Path](https://github.com/jpcx/deep-props.get/blob/0.1.0/docs/global.md#~Path) | Path to desired property. |
 | `opt` | [deep-props.get~Options](https://github.com/jpcx/deep-props.get/blob/0.1.0/docs/global.md#~Options) | Execution settings. |
 
@@ -223,7 +223,7 @@ Function used for custom handling of entry into next level of the dataset.
 | Name | Type | Description |
 | --- | --- | --- |
 | `target` | [deep-props.get~Target](https://github.com/jpcx/deep-props.get/blob/0.1.0/docs/global.md#~Target) | Current data being analyzed |
-| `key` | [deep-props~Key](https://github.com/jpcx/deep-props/blob/0.1.0/docs/global.md#~Key) | Next key along the path |
+| `key` | [deep-props~Key](https://github.com/jpcx/deep-props/blob/0.2.0/docs/global.md#~Key) | Next key along the path |
 
 Source:
 
@@ -296,7 +296,7 @@ Instructions that specify which keys should be accessed at each level of the dat
 
 ##### Type:
 
-*   Array.<[deep-props~Key](https://github.com/jpcx/deep-props/blob/0.1.0/docs/global.md#~Key)> | string
+*   Array.<[deep-props~Key](https://github.com/jpcx/deep-props/blob/0.2.0/docs/global.md#~Key)> | string
 
 Source:
 
@@ -329,7 +329,7 @@ Current reference to a given level of the path; parent to the next key along the
 
 ##### Type:
 
-*   [deep-props~Container](https://github.com/jpcx/deep-props/blob/0.1.0/docs/global.md#~Container) | string | undefined
+*   [deep-props~Container](https://github.com/jpcx/deep-props/blob/0.2.0/docs/global.md#~Container) | string | undefined
 
 Source:
 
@@ -337,7 +337,7 @@ Source:
 
 <hr>
 
-## [Home](/README.md)
+## [Home](https://github.com/jpcx/deep-props.get/blob/0.1.0/README.md)
 
 ### Modules
 
@@ -346,6 +346,6 @@ Source:
 
 ### Namespaces
 
-*   [deep-props](https://github.com/jpcx/deep-props/blob/0.1.0/docs/global.md)
+*   [deep-props](https://github.com/jpcx/deep-props/blob/0.2.0/docs/global.md)
 *   [extract](https://github.com/jpcx/deep-props.extract/blob/0.1.1/docs/global.md)
 *   [get](https://github.com/jpcx/deep-props.get/blob/0.1.0/docs/global.md)

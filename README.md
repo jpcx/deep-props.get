@@ -96,7 +96,7 @@ get(data, ['foo', 0, 'bar', wmKey, 'baz', 0, 'qux'])
 
 <a name="customizer_example"></a>
 
-**Usage of a custom extraction function (see [<code>Options</code>](https://github.com/jpcx/deep-props.get/blob/undefined/docs/global.md#~GetCustomizer))**
+**Usage of a custom extraction function (see [<code>Options</code>](https://github.com/jpcx/deep-props.get/blob/0.1.0/docs/global.md#~Options) and [<code>GetCustomizer</code>](https://github.com/jpcx/deep-props.get/blob/0.1.0/docs/global.md#~GetCustomizer))**
 ```js
 // Creation of a sample custom data structure which uses a 'retrieve' method for data access.
 class NonNativeDataStructure {
@@ -142,7 +142,7 @@ Retrieves a nested property from a data source by iterating over a supplied path
 
 | Name | Type | Attributes | Default | Description |
 | --- | --- | --- | --- | --- |
-| `host` | [deep-props~Host](https://github.com/jpcx/deep-props/blob/0.1.0/docs/global.md#~Host) |  |  | Container to search within. |
+| `host` | [deep-props~Host](https://github.com/jpcx/deep-props/blob/0.2.0/docs/global.md#~Host) |  |  | Container to search within. |
 | `path` | [deep-props.get~Path](https://github.com/jpcx/deep-props.get/blob/0.1.0/docs/global.md#~Path) |  |  | Path to desired property. |
 | `opt` | [deep-props.get~Options](https://github.com/jpcx/deep-props.get/blob/0.1.0/docs/global.md#~Options) | \<optional> | {} | Execution settings. |
 
@@ -156,7 +156,7 @@ Endpoint of path - the result of the search. Target is undefined if not found. I
 
 Type
 
-[deep-props.get~Target](https://github.com/jpcx/deep-props.get/blob/0.1.0/docs/global.md#~Target) | [deep-props~ResultGenerator](https://github.com/jpcx/deep-props/blob/0.1.0/docs/global.md#~ResultGenerator)
+[deep-props.get~Target](https://github.com/jpcx/deep-props.get/blob/0.1.0/docs/global.md#~Target) | [deep-props~ResultGenerator](https://github.com/jpcx/deep-props/blob/0.2.0/docs/global.md#~ResultGenerator)
 
 #
 
