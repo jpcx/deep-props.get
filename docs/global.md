@@ -1,13 +1,13 @@
-# [deep-props](https://github.com/jpcx/deep-props/blob/develop/docs/global.md).get
+# [deep-props](https://github.com/jpcx/deep-props/blob/0.2.0/docs/global.md).get
 
 Source:
 
-*   [deep-props.get/index.js](https://github.com/jpcx/deep-props.get/blob/develop/index.js), [line 9](https://github.com/jpcx/deep-props.get/blob/develop/index.js#L9)
+*   [deep-props.get/index.js](https://github.com/jpcx/deep-props.get/blob/0.1.0/index.js), [line 9](https://github.com/jpcx/deep-props.get/blob/0.1.0/index.js#L9)
 
 ### Methods
 
 <a name=".getFromKey"></a>
-#### (static) getFromKey(target, key, opt) → \{[deep-props.get~Target](https://github.com/jpcx/deep-props.get/blob/develop/docs/global.md#~Target)}
+#### (static) getFromKey(target, key, opt) → \{[deep-props.get~Target](https://github.com/jpcx/deep-props.get/blob/0.1.0/docs/global.md#~Target)}
 
 Gets a value from a Target behind a Key. Checks getCustomizer first, if it is provided.
 
@@ -15,13 +15,13 @@ Gets a value from a Target behind a Key. Checks getCustomizer first, if it is pr
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `target` | [deep-props.get~Target](https://github.com/jpcx/deep-props.get/blob/develop/docs/global.md#~Target) | Target object. |
-| `key` | [deep-props~Key](https://github.com/jpcx/deep-props/blob/develop/docs/global.md#~Key) | Access key. |
-| `opt` | [deep-props.get~Options](https://github.com/jpcx/deep-props.get/blob/develop/docs/global.md#~Options) | Execution settings. |
+| `target` | [deep-props.get~Target](https://github.com/jpcx/deep-props.get/blob/0.1.0/docs/global.md#~Target) | Target object. |
+| `key` | [deep-props~Key](https://github.com/jpcx/deep-props/blob/0.2.0/docs/global.md#~Key) | Access key. |
+| `opt` | [deep-props.get~Options](https://github.com/jpcx/deep-props.get/blob/0.1.0/docs/global.md#~Options) | Execution settings. |
 
 Source:
 
-*   [deep-props.get/index.js](https://github.com/jpcx/deep-props.get/blob/develop/index.js), [line 175](https://github.com/jpcx/deep-props.get/blob/develop/index.js#L175)
+*   [deep-props.get/index.js](https://github.com/jpcx/deep-props.get/blob/0.1.0/index.js), [line 175](https://github.com/jpcx/deep-props.get/blob/0.1.0/index.js#L175)
 
 ##### Returns:
 
@@ -29,7 +29,7 @@ New target, final value, or undefined.
 
 Type
 
-[deep-props.get~Target](https://github.com/jpcx/deep-props.get/blob/develop/docs/global.md#~Target)
+[deep-props.get~Target](https://github.com/jpcx/deep-props.get/blob/0.1.0/docs/global.md#~Target)
 
 ##### Example
 
@@ -41,7 +41,7 @@ getFromKey(new Set(['foo', 'bar']), 'bar', {})
 ```
 
 <a name=".getFromMap"></a>
-#### (static) getFromMap(target, key) → \{[deep-props.get~Target](https://github.com/jpcx/deep-props.get/blob/develop/docs/global.md#~Target)}
+#### (static) getFromMap(target, key) → \{[deep-props.get~Target](https://github.com/jpcx/deep-props.get/blob/0.1.0/docs/global.md#~Target)}
 
 Gets a key from a map, if it exists. Looks for key as key first; if not found, looks for insertion order as key.
 
@@ -49,12 +49,12 @@ Gets a key from a map, if it exists. Looks for key as key first; if not found, l
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `target` | [deep-props.get~Target](https://github.com/jpcx/deep-props.get/blob/develop/docs/global.md#~Target) | Target of Key search. |
-| `key` | [deep-props~Key](https://github.com/jpcx/deep-props/blob/develop/docs/global.md#~Key) | Key to find in target. |
+| `target` | [deep-props.get~Target](https://github.com/jpcx/deep-props.get/blob/0.1.0/docs/global.md#~Target) | Target of Key search. |
+| `key` | [deep-props~Key](https://github.com/jpcx/deep-props/blob/0.2.0/docs/global.md#~Key) | Key to find in target. |
 
 Source:
 
-*   [deep-props.get/index.js](https://github.com/jpcx/deep-props.get/blob/develop/index.js), [line 138](https://github.com/jpcx/deep-props.get/blob/develop/index.js#L138)
+*   [deep-props.get/index.js](https://github.com/jpcx/deep-props.get/blob/0.1.0/index.js), [line 138](https://github.com/jpcx/deep-props.get/blob/0.1.0/index.js#L138)
 
 ##### Returns:
 
@@ -62,7 +62,7 @@ New target from key or undefined if not found.
 
 Type
 
-[deep-props.get~Target](https://github.com/jpcx/deep-props.get/blob/develop/docs/global.md#~Target)
+[deep-props.get~Target](https://github.com/jpcx/deep-props.get/blob/0.1.0/docs/global.md#~Target)
 
 ##### Example
 
@@ -74,7 +74,7 @@ getFromMap(new Map([[ 'foo', 'bar' ]]), 0)
 ```
 
 <a name=".getFromSet"></a>
-#### (static) getFromSet(target, key) → \{[deep-props.get~Target](https://github.com/jpcx/deep-props.get/blob/develop/docs/global.md#~Target)}
+#### (static) getFromSet(target, key) → \{[deep-props.get~Target](https://github.com/jpcx/deep-props.get/blob/0.1.0/docs/global.md#~Target)}
 
 Checks to see if a Set has a key. If so, returns the key. If not found, looks for insertion order as key.
 
@@ -82,12 +82,12 @@ Checks to see if a Set has a key. If so, returns the key. If not found, looks fo
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `target` | [deep-props.get~Target](https://github.com/jpcx/deep-props.get/blob/develop/docs/global.md#~Target) | Target of Key search. |
-| `key` | [deep-props~Key](https://github.com/jpcx/deep-props/blob/develop/docs/global.md#~Key) | Key to find in target. |
+| `target` | [deep-props.get~Target](https://github.com/jpcx/deep-props.get/blob/0.1.0/docs/global.md#~Target) | Target of Key search. |
+| `key` | [deep-props~Key](https://github.com/jpcx/deep-props/blob/0.2.0/docs/global.md#~Key) | Key to find in target. |
 
 Source:
 
-*   [deep-props.get/index.js](https://github.com/jpcx/deep-props.get/blob/develop/index.js), [line 156](https://github.com/jpcx/deep-props.get/blob/develop/index.js#L156)
+*   [deep-props.get/index.js](https://github.com/jpcx/deep-props.get/blob/0.1.0/index.js), [line 156](https://github.com/jpcx/deep-props.get/blob/0.1.0/index.js#L156)
 
 ##### Returns:
 
@@ -95,7 +95,7 @@ New target from key or undefined if not found.
 
 Type
 
-[deep-props.get~Target](https://github.com/jpcx/deep-props.get/blob/develop/docs/global.md#~Target)
+[deep-props.get~Target](https://github.com/jpcx/deep-props.get/blob/0.1.0/docs/global.md#~Target)
 
 ##### Example
 
@@ -107,7 +107,7 @@ getFromSet(new Set([ 'foo', 'bar' ]), 0)
 ```
 
 <a name=".getFromString"></a>
-#### (static) getFromString(target, key) → \{[deep-props.get~Target](https://github.com/jpcx/deep-props.get/blob/develop/docs/global.md#~Target)}
+#### (static) getFromString(target, key) → \{[deep-props.get~Target](https://github.com/jpcx/deep-props.get/blob/0.1.0/docs/global.md#~Target)}
 
 Checks for String objects and properties attached to them. If not, checks for JSON and returns property from the extracted JSON object. If not JSON, returns the character at that index.
 
@@ -115,12 +115,12 @@ Checks for String objects and properties attached to them. If not, checks for JS
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `target` | [deep-props.get~Target](https://github.com/jpcx/deep-props.get/blob/develop/docs/global.md#~Target) | Target of Key search. |
-| `key` | [deep-props~Key](https://github.com/jpcx/deep-props/blob/develop/docs/global.md#~Key) | Key to find in target. |
+| `target` | [deep-props.get~Target](https://github.com/jpcx/deep-props.get/blob/0.1.0/docs/global.md#~Target) | Target of Key search. |
+| `key` | [deep-props~Key](https://github.com/jpcx/deep-props/blob/0.2.0/docs/global.md#~Key) | Key to find in target. |
 
 Source:
 
-*   [deep-props.get/index.js](https://github.com/jpcx/deep-props.get/blob/develop/index.js), [line 113](https://github.com/jpcx/deep-props.get/blob/develop/index.js#L113)
+*   [deep-props.get/index.js](https://github.com/jpcx/deep-props.get/blob/0.1.0/index.js), [line 113](https://github.com/jpcx/deep-props.get/blob/0.1.0/index.js#L113)
 
 ##### Returns:
 
@@ -128,7 +128,7 @@ New target from key or undefined if not found.
 
 Type
 
-[deep-props.get~Target](https://github.com/jpcx/deep-props.get/blob/develop/docs/global.md#~Target)
+[deep-props.get~Target](https://github.com/jpcx/deep-props.get/blob/0.1.0/docs/global.md#~Target)
 
 ##### Examples
 
@@ -157,7 +157,7 @@ getFromString(strObj, '2')
 ```
 
 <a name=".search"></a>
-#### (generator, static) search(host, path, opt) → \{[deep-props.get~Target](https://github.com/jpcx/deep-props.get/blob/develop/docs/global.md#~Target)}
+#### (generator, static) search(host, path, opt) → \{[deep-props.get~Target](https://github.com/jpcx/deep-props.get/blob/0.1.0/docs/global.md#~Target)}
 
 Iterates along the supplied path and shifts a reference point along the way.
 
@@ -165,13 +165,13 @@ Iterates along the supplied path and shifts a reference point along the way.
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `host` | [deep-props~Host](https://github.com/jpcx/deep-props/blob/develop/docs/global.md#~Host) | Base container dataset to search within. |
-| `path` | [deep-props.get~Path](https://github.com/jpcx/deep-props.get/blob/develop/docs/global.md#~Path) | Path to desired property. |
-| `opt` | [deep-props.get~Options](https://github.com/jpcx/deep-props.get/blob/develop/docs/global.md#~Options) | Execution settings. |
+| `host` | [deep-props~Host](https://github.com/jpcx/deep-props/blob/0.2.0/docs/global.md#~Host) | Base container dataset to search within. |
+| `path` | [deep-props.get~Path](https://github.com/jpcx/deep-props.get/blob/0.1.0/docs/global.md#~Path) | Path to desired property. |
+| `opt` | [deep-props.get~Options](https://github.com/jpcx/deep-props.get/blob/0.1.0/docs/global.md#~Options) | Execution settings. |
 
 Source:
 
-*   [deep-props.get/index.js](https://github.com/jpcx/deep-props.get/blob/develop/index.js), [line 222](https://github.com/jpcx/deep-props.get/blob/develop/index.js#L222)
+*   [deep-props.get/index.js](https://github.com/jpcx/deep-props.get/blob/0.1.0/index.js), [line 222](https://github.com/jpcx/deep-props.get/blob/0.1.0/index.js#L222)
 
 ##### Returns:
 
@@ -187,7 +187,7 @@ Data retrieved at each level of execution; value of Target before reassignment.
 
 Type
 
-[deep-props.get~Target](https://github.com/jpcx/deep-props.get/blob/develop/docs/global.md#~Target)
+[deep-props.get~Target](https://github.com/jpcx/deep-props.get/blob/0.1.0/docs/global.md#~Target)
 
 ##### Example
 
@@ -210,7 +210,7 @@ query.next()
 ### Type Definitions
 
 <a name="~GetCustomizer"></a>
-#### GetCustomizer(target, key) → \{[deep-props.get~Target](https://github.com/jpcx/deep-props.get/blob/develop/docs/global.md#~Target)}
+#### GetCustomizer(target, key) → \{[deep-props.get~Target](https://github.com/jpcx/deep-props.get/blob/0.1.0/docs/global.md#~Target)}
 
 Function used for custom handling of entry into next level of the dataset.
 
@@ -222,12 +222,12 @@ Function used for custom handling of entry into next level of the dataset.
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `target` | [deep-props.get~Target](https://github.com/jpcx/deep-props.get/blob/develop/docs/global.md#~Target) | Current data being analyzed |
-| `key` | [deep-props~Key](https://github.com/jpcx/deep-props/blob/develop/docs/global.md#~Key) | Next key along the path |
+| `target` | [deep-props.get~Target](https://github.com/jpcx/deep-props.get/blob/0.1.0/docs/global.md#~Target) | Current data being analyzed |
+| `key` | [deep-props~Key](https://github.com/jpcx/deep-props/blob/0.2.0/docs/global.md#~Key) | Next key along the path |
 
 Source:
 
-*   [deep-props.get/index.js](https://github.com/jpcx/deep-props.get/blob/develop/index.js), [line 28](https://github.com/jpcx/deep-props.get/blob/develop/index.js#L28)
+*   [deep-props.get/index.js](https://github.com/jpcx/deep-props.get/blob/0.1.0/index.js), [line 28](https://github.com/jpcx/deep-props.get/blob/0.1.0/index.js#L28)
 
 ##### Returns:
 
@@ -235,7 +235,7 @@ Value to pass along to the search function as the next Target. If undefined, wil
 
 Type
 
-[deep-props.get~Target](https://github.com/jpcx/deep-props.get/blob/develop/docs/global.md#~Target)
+[deep-props.get~Target](https://github.com/jpcx/deep-props.get/blob/0.1.0/docs/global.md#~Target)
 
 ##### Example
 
@@ -261,12 +261,12 @@ Settings for customizing behaviour.
 | Name | Type | Attributes | Description |
 | --- | --- | --- | --- |
 | `gen` | Boolean | \<optional> | If true, module returns a generator that yields each search step and returns the final value. |
-| `getCustomizer` | [deep-props.get~GetCustomizer](https://github.com/jpcx/deep-props.get/blob/develop/docs/global.md#~GetCustomizer) | \<optional> | Allows for custom extraction. |
+| `getCustomizer` | [deep-props.get~GetCustomizer](https://github.com/jpcx/deep-props.get/blob/0.1.0/docs/global.md#~GetCustomizer) | \<optional> | Allows for custom extraction. |
 | `match` | RegExp | \<optional> | Regular expression used for custom key extraction from supplied path string. If supplied, it is used as the only argument for `path.match()`, which should return an array of key names. |
 
 Source:
 
-*   [deep-props.get/index.js](https://github.com/jpcx/deep-props.get/blob/develop/index.js), [line 48](https://github.com/jpcx/deep-props.get/blob/develop/index.js#L48)
+*   [deep-props.get/index.js](https://github.com/jpcx/deep-props.get/blob/0.1.0/index.js), [line 48](https://github.com/jpcx/deep-props.get/blob/0.1.0/index.js#L48)
 
 ##### Example
 
@@ -296,11 +296,11 @@ Instructions that specify which keys should be accessed at each level of the dat
 
 ##### Type:
 
-*   Array.<[deep-props~Key](https://github.com/jpcx/deep-props/blob/develop/docs/global.md#~Key)> | string
+*   Array.<[deep-props~Key](https://github.com/jpcx/deep-props/blob/0.2.0/docs/global.md#~Key)> | string
 
 Source:
 
-*   [deep-props.get/index.js](https://github.com/jpcx/deep-props.get/blob/develop/index.js), [line 67](https://github.com/jpcx/deep-props.get/blob/develop/index.js#L67)
+*   [deep-props.get/index.js](https://github.com/jpcx/deep-props.get/blob/0.1.0/index.js), [line 67](https://github.com/jpcx/deep-props.get/blob/0.1.0/index.js#L67)
 
 ##### Examples
 
@@ -329,23 +329,23 @@ Current reference to a given level of the path; parent to the next key along the
 
 ##### Type:
 
-*   [deep-props~Container](https://github.com/jpcx/deep-props/blob/develop/docs/global.md#~Container) | string | undefined
+*   [deep-props~Container](https://github.com/jpcx/deep-props/blob/0.2.0/docs/global.md#~Container) | string | undefined
 
 Source:
 
-*   [deep-props.get/index.js](https://github.com/jpcx/deep-props.get/blob/develop/index.js), [line 11](https://github.com/jpcx/deep-props.get/blob/develop/index.js#L11)
+*   [deep-props.get/index.js](https://github.com/jpcx/deep-props.get/blob/0.1.0/index.js), [line 11](https://github.com/jpcx/deep-props.get/blob/0.1.0/index.js#L11)
 
 <hr>
 
-## [Home](https://github.com/jpcx/deep-props.get/blob/develop/README.md)
+## [Home](https://github.com/jpcx/deep-props.get/blob/0.1.0/README.md)
 
 ### Modules
 
-*   [extract](https://github.com/jpcx/deep-props.extract/blob/develop/docs/API.md)
-*   [get](https://github.com/jpcx/deep-props.get/blob/develop/docs/API.md)
+*   [extract](https://github.com/jpcx/deep-props.extract/blob/0.1.1/docs/API.md)
+*   [get](https://github.com/jpcx/deep-props.get/blob/0.1.0/docs/API.md)
 
 ### Namespaces
 
-*   [deep-props](https://github.com/jpcx/deep-props/blob/develop/docs/global.md)
-*   [extract](https://github.com/jpcx/deep-props.extract/blob/develop/docs/global.md)
-*   [get](https://github.com/jpcx/deep-props.get/blob/develop/docs/global.md)
+*   [deep-props](https://github.com/jpcx/deep-props/blob/0.2.0/docs/global.md)
+*   [extract](https://github.com/jpcx/deep-props.extract/blob/0.1.1/docs/global.md)
+*   [get](https://github.com/jpcx/deep-props.get/blob/0.1.0/docs/global.md)
