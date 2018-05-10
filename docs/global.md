@@ -289,7 +289,7 @@ Instructions that specify which keys should be accessed at each level of the dat
 
 *   A nested array `'arr'` with property `arr[0][0] === 'foo'` should be represented as `[0, 0]` or `'[0][0]'`, (or `'0.0'`, etc.) in order to retrieve `'foo'`.
 *   A nested object `'nest'` with property `nest.foo.bar === 'baz'` should be represented as either `['foo', 'bar']` or `'foo.bar'` (or `'foo[bar]'`, etc.) in order to retrieve `'baz'`.
-*   String paths will be converted to an array of keys based on matches of the following regex: `/[^.[\\]]+/g`.
+*   String paths will be converted to an array of keys based on matches of the following regex: `/[^.[\]]+/g`.
     *   In other words, anything between periods or brackets will be interpreted as keys.
     *   Paths containing any keys that are references (such as WeakMap keys) must be passed as an array, such as `['foo', 'bar', weakMapKey]`
     *   Paths containing any keys with periods or brackets must also be passed as an array, such as `['foo.bar', 'baz[qux]']` (unless a custom match regex is supplied).

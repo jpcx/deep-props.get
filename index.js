@@ -69,7 +69,7 @@
  * <ul>
  *   <li> A nested array <code>'arr'</code> with property <code>arr[0][0] === 'foo'</code> should be represented as <code>[0, 0]</code> or <code>'[0][0]'</code>, (or <code>'0.0'</code>, etc.) in order to retrieve <code>'foo'</code>.
  *   <li> A nested object <code>'nest'</code> with property <code>nest.foo.bar === 'baz'</code> should be represented as either <code>['foo', 'bar']</code> or <code>'foo.bar'</code> (or <code>'foo[bar]'</code>, etc.) in order to retrieve <code>'baz'</code>.
- *   <li> String paths will be converted to an array of keys based on matches of the following regex: <code>/[^.[\\]]+/g</code>.
+ *   <li> String paths will be converted to an array of keys based on matches of the following regex: <code>/[^.[\]]+/g</code>.
  *   <ul>
  *     <li> In other words, anything between periods or brackets will be interpreted as keys.
  *     <li> Paths containing any keys that are references (such as WeakMap keys) must be passed as an array, such as <code>['foo', 'bar', weakMapKey]</code>
