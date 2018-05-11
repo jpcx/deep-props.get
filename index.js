@@ -9,6 +9,47 @@
 /** @namespace deep-props.get */
 
 /**
+ * Custom dataset for use as a <a href="#~Container">Container</a>. May be accessed via valid customizer functions.
+ *
+ * @typedef {*} deep-props.get~Custom
+ * @example
+ * (() => {
+ *   class CustomDataStructure {
+ *     constructor(array) {
+ *       this.get = i => array[i]
+ *       this.getValues = () => array
+ *       this.push = x => array.push(x)
+ *     }
+ *   }
+ *   return new CustomDataStructure([ 'foo', 'bar' ])
+ * })()
+ */
+
+/**
+ * Key used for accessing a child property within a container. When its value is <code>'__proto__'</code>, it is used as a stand-in for <code>Object.getPrototypeOf()</code>.
+ *
+ * @typedef {(string|deep-props.get~Container)} deep-props.get~Key
+ */
+
+/**
+ * Container object used as a target for child property extraction.
+ *
+ * @typedef {(Object|Array|Map|WeakMap|Set|WeakSet|deep-props.get~Custom)} deep-props.get~Container
+ */
+
+/**
+ * A non-primitive <a href="#~Container">Container</a> which represents the root of a given path.
+ *
+ * @typedef {deep-props.get~Container} deep-props.get~Host
+ */
+
+/**
+ * Generator object which yields stepwise operation results.
+ *
+ * @typedef {Object} deep-props.get~ResultGenerator
+ */
+
+/**
  * Current reference to a given level of the path; parent to the next key along the path.
  * <ul>
  *   <li> For the host <code>{ foo: { bar: 'baz' } }</code> and a path <code>['foo', 'bar']</code>, the Target value will change during the search as follows:
@@ -22,7 +63,7 @@
  *   </ul>
  * </ul>
  *
- * @typedef {(deep-props~Container|string|undefined)} deep-props.get~Target
+ * @typedef {(deep-props.get~Container|string|undefined)} deep-props.get~Target
  */
 
 /**
@@ -35,7 +76,7 @@
  *
  * @typedef {function} deep-props.get~GetCustomizer
  * @param   {deep-props.get~Target} target - Current data being analyzed
- * @param   {deep-props~Key}        key    - Next key along the path
+ * @param   {deep-props.get~Key}    key    - Next key along the path
  * @returns {deep-props.get~Target} Value to pass along to the search function as the next Target. If undefined, will fall back on using standard extraction methods to find the next Target.
  * @example
  * (target, key) => {
@@ -77,7 +118,7 @@
  *   </ul>
  * </ul>
  *
- * @typedef  {deep-props~Key[]|string} deep-props.get~Path
+ * @typedef  {deep-props.get~Key[]|string} deep-props.get~Path
  * @example
  * [ 'foo', 'bar', 'baz' ]
  * @example
@@ -91,7 +132,7 @@
  *
  * @memberof deep-props.get
  * @param    {deep-props.get~Target} target - Target of Key search.
- * @param    {deep-props~Key}        key    - Key to find in target.
+ * @param    {deep-props.get~Key}    key    - Key to find in target.
  * @returns  {deep-props.get~Target} New target from key or undefined if not found.
  * @example
  * // returns 'bar'
@@ -127,7 +168,7 @@ const getFromString = (target, key) => {
  *
  * @memberof deep-props.get
  * @param    {deep-props.get~Target} target - Target of Key search.
- * @param    {deep-props~Key}        key    - Key to find in target.
+ * @param    {deep-props.get~Key}    key    - Key to find in target.
  * @returns  {deep-props.get~Target} New target from key or undefined if not found.
  * @example
  * // all return 'bar'
@@ -145,7 +186,7 @@ const getFromMap = (target, key) => {
  *
  * @memberof deep-props.get
  * @param   {deep-props.get~Target} target - Target of Key search.
- * @param   {deep-props~Key}        key    - Key to find in target.
+ * @param   {deep-props.get~Key}    key    - Key to find in target.
  * @returns {deep-props.get~Target} New target from key or undefined if not found.
  * @example
  * // all return 'foo'
@@ -162,10 +203,10 @@ const getFromSet = (target, key) => {
  * Gets a value from a Target behind a Key. Checks getCustomizer first, if it is provided.
  *
  * @memberof deep-props.get
- * @param {deep-props.get~Target} target - Target object.
- * @param {deep-props~Key} key - Access key.
- * @param {deep-props.get~Options} opt - Execution settings.
- * @returns {deep-props.get~Target} New target, final value, or undefined.
+ * @param   {deep-props.get~Target}  target - Target object.
+ * @param   {deep-props.get~Key}     key    - Access key.
+ * @param   {deep-props.get~Options} opt    - Execution settings.
+ * @returns {deep-props.get~Target}  New target, final value, or undefined.
  * @example
  * // all return 'bar'
  * getFromKey({foo: 'bar'}, 'foo', {})
@@ -199,7 +240,7 @@ const getFromKey = (target, key, opt) => {
  *
  * @generator
  * @memberof deep-props.get
- * @param   {deep-props~Host} host - Base container dataset to search within.
+ * @param   {deep-props.get~Host} host - Base container dataset to search within.
  * @param   {deep-props.get~Path} path - Path to desired property.
  * @param   {deep-props.get~Options} opt - Execution settings.
  * @yields  {deep-props.get~Target} Data retrieved at each level of execution; value of Target before reassignment.
@@ -242,10 +283,10 @@ const search = function * (host, path, opt) {
  * Retrieves a nested property from a data source by iterating over a supplied path. Supports Objects, Arrays, Maps, Weakmaps, and JSON strings automatically. Supports the use of a custom extraction function to handle unsupported datasets.
  *
  * @module  get
- * @param   {deep-props~Host} host - Container to search within.
+ * @param   {deep-props.get~Host} host - Container to search within.
  * @param   {deep-props.get~Path} path - Path to desired property.
  * @param   {deep-props.get~Options} [opt={}] - Execution settings.
- * @returns {(deep-props.get~Target|deep-props~ResultGenerator)} Endpoint of path - the result of the search. Target is undefined if not found. If <code>opt.gen === true</code>, returns a generator that yields each search step.
+ * @returns {(deep-props.get~Target|deep-props.get~ResultGenerator)} Endpoint of path - the result of the search. Target is undefined if not found. If <code>opt.gen === true</code>, returns a generator that yields each search step.
  * @example
  * // Nested object and array extraction
  *
@@ -277,7 +318,7 @@ const search = function * (host, path, opt) {
  * const testAB = new ArrayBuffer(16)
  * new Int16Array(testAB)[0] = 2
  *
- * const nest = new NonNativeDataStructure[{ foo: { bar: testAB } }]
+ * const nest = new NonNativeDataStructure([{ foo: { bar: testAB } }])
  *
  * // returns undefined
  * get(nest, '0.foo.bar[0]')
@@ -286,7 +327,7 @@ const search = function * (host, path, opt) {
  * get(nest, '0.foo.bar[0]', {
  *   getCustomizer: (target, key) => {
  *     if (target instanceof NonNativeDataStructure) {
- *       return target.retrieve(next)
+ *       return target.retrieve(key)
  *     }
  *     if (target instanceof ArrayBuffer && target.byteLength === 16) {
  *       return new Int16Array(target)[key]
