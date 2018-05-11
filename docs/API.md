@@ -7,13 +7,13 @@ Retrieves a nested property from a data source by iterating over a supplied path
 
 | Name | Type | Attributes | Default | Description |
 | --- | --- | --- | --- | --- |
-| `host` | [deep-props~Host](https://github.com/jpcx/deep-props/blob/0.2.0/docs/global.md#~Host) |  |  | Container to search within. |
-| `path` | [deep-props.get~Path](https://github.com/jpcx/deep-props.get/blob/0.1.0/docs/global.md#~Path) |  |  | Path to desired property. |
-| `opt` | [deep-props.get~Options](https://github.com/jpcx/deep-props.get/blob/0.1.0/docs/global.md#~Options) | \<optional> | {} | Execution settings. |
+| `host` | [deep-props.get~Host](https://github.com/jpcx/deep-props.get/blob/0.1.1/docs/global.md#~Host) |  |  | Container to search within. |
+| `path` | [deep-props.get~Path](https://github.com/jpcx/deep-props.get/blob/0.1.1/docs/global.md#~Path) |  |  | Path to desired property. |
+| `opt` | [deep-props.get~Options](https://github.com/jpcx/deep-props.get/blob/0.1.1/docs/global.md#~Options) | \<optional> | {} | Execution settings. |
 
 Source:
 
-*   [deep-props.get/index.js](https://github.com/jpcx/deep-props.get/blob/0.1.0/index.js), [line 241](https://github.com/jpcx/deep-props.get/blob/0.1.0/index.js#L241)
+*   [deep-props.get/index.js](https://github.com/jpcx/deep-props.get/blob/0.1.1/index.js), [line 282](https://github.com/jpcx/deep-props.get/blob/0.1.1/index.js#L282)
 
 ##### Returns:
 
@@ -21,7 +21,7 @@ Endpoint of path - the result of the search. Target is undefined if not found. I
 
 Type
 
-[deep-props.get~Target](https://github.com/jpcx/deep-props.get/blob/0.1.0/docs/global.md#~Target) | [deep-props~ResultGenerator](https://github.com/jpcx/deep-props/blob/0.2.0/docs/global.md#~ResultGenerator)
+[deep-props.get~Target](https://github.com/jpcx/deep-props.get/blob/0.1.1/docs/global.md#~Target) | [deep-props.get~ResultGenerator](https://github.com/jpcx/deep-props.get/blob/0.1.1/docs/global.md#~ResultGenerator)
 
 ##### Examples
 
@@ -60,7 +60,7 @@ class NonNativeDataStructure {
 const testAB = new ArrayBuffer(16)
 new Int16Array(testAB)[0] = 2
 
-const nest = new NonNativeDataStructure[{ foo: { bar: testAB } }]
+const nest = new NonNativeDataStructure([{ foo: { bar: testAB } }])
 
 // returns undefined
 get(nest, '0.foo.bar[0]')
@@ -69,7 +69,7 @@ get(nest, '0.foo.bar[0]')
 get(nest, '0.foo.bar[0]', {
   getCustomizer: (target, key) => {
     if (target instanceof NonNativeDataStructure) {
-      return target.retrieve(next)
+      return target.retrieve(key)
     }
     if (target instanceof ArrayBuffer && target.byteLength === 16) {
       return new Int16Array(target)[key]
@@ -95,16 +95,4 @@ for (let step of query) {
 
 <hr>
 
-## [Home](https://github.com/jpcx/deep-props.get/blob/0.1.0/README.md)
-
-### Modules
-
-*   [deep-props](https://github.com/jpcx/deep-props/blob/0.2.0/docs/API.md)
-*   [extract](https://github.com/jpcx/deep-props.extract/blob/0.1.1/docs/API.md)
-*   [get](https://github.com/jpcx/deep-props.get/blob/0.1.0/docs/API.md)
-
-### Namespaces
-
-*   [deep-props](https://github.com/jpcx/deep-props/blob/0.2.0/docs/global.md)
-*   [extract](https://github.com/jpcx/deep-props.extract/blob/0.1.1/docs/global.md)
-*   [get](https://github.com/jpcx/deep-props.get/blob/0.1.0/docs/global.md)
+## [Home](https://github.com/jpcx/deep-props.get/blob/0.1.1/README.md)
