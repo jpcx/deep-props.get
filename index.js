@@ -280,7 +280,7 @@ const search = function * (host, path, opt) {
 }
 
 /**
- * Retrieves a nested property from a data source by iterating over a supplied path. Supports Objects, Arrays, Maps, Weakmaps, and JSON strings automatically. Supports the use of a custom extraction function to handle unsupported datasets.
+ * Retrieves a nested property from a data source by iterating over a supplied path. Supports Objects, Arrays, Maps, Sets, WeakMaps, and JSON strings automatically. Supports the use of a custom extraction function to handle unsupported datasets.
  *
  * @module  get
  * @param   {deep-props.get~Host} host - Container to search within.

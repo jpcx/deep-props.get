@@ -1,19 +1,19 @@
 Module: get
 ===========
 
-Retrieves a nested property from a data source by iterating over a supplied path. Supports Objects, Arrays, Maps, Weakmaps, and JSON strings automatically. Supports the use of a custom extraction function to handle unsupported datasets.
+Retrieves a nested property from a data source by iterating over a supplied path. Supports Objects, Arrays, Maps, Sets, WeakMaps, and JSON strings automatically. Supports the use of a custom extraction function to handle unsupported datasets.
 
 ##### Parameters:
 
 | Name | Type | Attributes | Default | Description |
 | --- | --- | --- | --- | --- |
-| `host` | [deep-props.get~Host](https://github.com/jpcx/deep-props.get/blob/0.1.2/docs/global.md#~Host) |  |  | Container to search within. |
-| `path` | [deep-props.get~Path](https://github.com/jpcx/deep-props.get/blob/0.1.2/docs/global.md#~Path) |  |  | Path to desired property. |
-| `opt` | [deep-props.get~Options](https://github.com/jpcx/deep-props.get/blob/0.1.2/docs/global.md#~Options) | \<optional> | {} | Execution settings. |
+| `host` | [deep-props.get~Host](https://github.com/jpcx/deep-props.get/blob/0.1.3/docs/global.md#~Host) |  |  | Container to search within. |
+| `path` | [deep-props.get~Path](https://github.com/jpcx/deep-props.get/blob/0.1.3/docs/global.md#~Path) |  |  | Path to desired property. |
+| `opt` | [deep-props.get~Options](https://github.com/jpcx/deep-props.get/blob/0.1.3/docs/global.md#~Options) | \<optional> | {} | Execution settings. |
 
 Source:
 
-*   [deep-props.get/index.js](https://github.com/jpcx/deep-props.get/blob/0.1.2/index.js), [line 282](https://github.com/jpcx/deep-props.get/blob/0.1.2/index.js#L282)
+*   [deep-props.get/index.js](https://github.com/jpcx/deep-props.get/blob/0.1.3/index.js), [line 282](https://github.com/jpcx/deep-props.get/blob/0.1.3/index.js#L282)
 
 ##### Returns:
 
@@ -21,7 +21,7 @@ Endpoint of path - the result of the search. Target is undefined if not found. I
 
 Type
 
-[deep-props.get~Target](https://github.com/jpcx/deep-props.get/blob/0.1.2/docs/global.md#~Target) | [deep-props.get~ResultGenerator](https://github.com/jpcx/deep-props.get/blob/0.1.2/docs/global.md#~ResultGenerator)
+[deep-props.get~Target](https://github.com/jpcx/deep-props.get/blob/0.1.3/docs/global.md#~Target) | [deep-props.get~ResultGenerator](https://github.com/jpcx/deep-props.get/blob/0.1.3/docs/global.md#~ResultGenerator)
 
 ##### Examples
 
@@ -95,4 +95,4 @@ for (let step of query) {
 
 <hr>
 
-## [Home](https://github.com/jpcx/deep-props.get/blob/0.1.2/README.md)
+## [Home](https://github.com/jpcx/deep-props.get/blob/0.1.3/README.md)
