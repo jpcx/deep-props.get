@@ -1,6 +1,6 @@
 /**
  * @author Justin Collier <jpcxme@gmail.com>
- * @see {@link http://github.com/jpcx/deep-props|GitHub}
+ * @see {@link http://github.com/jpcx/deep-props.get|GitHub}
  * @license MIT
  */
 
@@ -28,7 +28,7 @@
 /**
  * Key used for accessing a child property within a container. When its value is <code>'__proto__'</code>, it is used as a stand-in for <code>Object.getPrototypeOf()</code>.
  *
- * @typedef {(string|deep-props.get~Container)} deep-props.get~Key
+ * @typedef {*} deep-props.get~Key
  */
 
 /**
@@ -52,7 +52,7 @@
 /**
  * Current reference to a given level of the path; parent to the next key along the path.
  * <ul>
- *   <li> For the host <code>{ foo: { bar: 'baz' } }</code> and a path <code>['foo', 'bar']</code>, the Target value will change during the search as follows:
+ *   <li> For the host <code>{ foo: { bar: 'baz' } }</code> and a path <code>['foo', 'bar']</code>, the Target value will change during the operation as follows:
  *   <ul>
  *     <li> <code>{ bar: 'baz' }</code>
  *     <li> <code>'baz'</code>
@@ -75,8 +75,8 @@
  * </ul>
  *
  * @typedef {function} deep-props.get~GetCustomizer
- * @param   {deep-props.get~Target} target - Current data being analyzed
- * @param   {deep-props.get~Key}    key    - Next key along the path
+ * @param   {deep-props.get~Target} target - Current data being analyzed.
+ * @param   {deep-props.get~Key}    key    - Key used to extract from target.
  * @returns {deep-props.get~Target} Value to pass along to the search function as the next Target. If undefined, will fall back on using standard extraction methods to find the next Target.
  * @example
  * (target, key) => {
@@ -90,7 +90,7 @@
  * Settings for customizing behaviour.
  *
  * @typedef  {Object}  deep-props.get~Options
- * @property {Boolean} [gen] - If true, module returns a generator that yields each search step and returns the final value.
+ * @property {boolean} [gen] - If true, module returns a generator that yields each search step and ends at the final value.
  * @property {deep-props.get~GetCustomizer} [getCustomizer] - Allows for custom extraction.
  * @property {RegExp} [match] - Regular expression used for custom key extraction from supplied path string. If supplied, it is used as the only argument for <code>path.match()</code>, which should return an array of key names.
  * @example
