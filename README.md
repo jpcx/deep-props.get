@@ -38,7 +38,11 @@ const get = require('deep-props.get')
 
 ### Usage
 
+<<<<<<< HEAD
 ***Note:*** For string paths using standard settings, '.' is considered the same as '[' and ']'. See [<code>Options</code>](https://github.com/jpcx/deep-props.get/blob/0.1.5/docs/global.md#~Options) for instructions for customizing this behavior.
+=======
+***Note:*** For string paths using standard settings, '.' is considered the same as '[' and ']'. See [<code>Options</code>](https://github.com/jpcx/deep-props.get/blob/0.1.4/docs/global.md#~Options) for instructions for customizing this behavior.
+>>>>>>> 2a7da931740770b8415775032c0464f50496eb7a
 
 **Nested Object Extraction**
 ```js
@@ -196,7 +200,11 @@ get(nest, ['foo', 0, 'bar', wmKey, 'baz', 0, 'qux'])
 
 <a name="customizer_example"></a>
 
+<<<<<<< HEAD
 **Usage of a custom extraction function (see [<code>Options</code>](https://github.com/jpcx/deep-props.get/blob/0.1.5/docs/global.md#~Options) and [<code>GetCustomizer</code>](https://github.com/jpcx/deep-props.get/blob/0.1.5/docs/global.md#~GetCustomizer))**
+=======
+**Usage of a custom extraction function (see [<code>Options</code>](https://github.com/jpcx/deep-props.get/blob/0.1.4/docs/global.md#~Options) and [<code>GetCustomizer</code>](https://github.com/jpcx/deep-props.get/blob/0.1.4/docs/global.md#~GetCustomizer))**
+>>>>>>> 2a7da931740770b8415775032c0464f50496eb7a
 ```js
 // Creation of a sample custom data structure which uses a 'retrieve' method for data access.
 class NonNativeDataStructure {
@@ -231,17 +239,23 @@ get(nest, '0.foo.bar[0]', {
 ## Documentation
 
 ### See:
+<<<<<<< HEAD
   + [API Docs](https://github.com/jpcx/deep-props.get/blob/0.1.5/docs/API.md)
   + [Global Docs](https://github.com/jpcx/deep-props.get/blob/0.1.5/docs/global.md)
+=======
+  + [API Docs](https://github.com/jpcx/deep-props.get/blob/0.1.4/docs/API.md)
+  + [Global Docs](https://github.com/jpcx/deep-props.get/blob/0.1.4/docs/global.md)
+>>>>>>> 2a7da931740770b8415775032c0464f50496eb7a
 
 ### Module: get
 
-Retrieves a nested property from a data source by iterating over a supplied path. Supports Objects, Arrays, Maps, Sets, WeakMaps, and JSON strings automatically. Supports the use of a custom extraction function to handle unsupported datasets.
+Retrieves a nested property from a data source. Supports Objects, Arrays, Maps, Sets, WeakMaps, WeakSets, and JSON. Supports the use of a custom extraction function to handle unsupported datasets.
 
 ##### Parameters:
 
 | Name | Type | Attributes | Default | Description |
 | --- | --- | --- | --- | --- |
+<<<<<<< HEAD
 | `host` | [deep-props.get~Host](https://github.com/jpcx/deep-props.get/blob/0.1.5/docs/global.md#~Host) |  |  | Container to search within. |
 | `path` | [deep-props.get~Path](https://github.com/jpcx/deep-props.get/blob/0.1.5/docs/global.md#~Path) |  |  | Path to desired property. |
 | `opt` | [deep-props.get~Options](https://github.com/jpcx/deep-props.get/blob/0.1.5/docs/global.md#~Options) | \<optional> | {} | Execution settings. |
@@ -249,6 +263,15 @@ Retrieves a nested property from a data source by iterating over a supplied path
 Source:
 
 *   [deep-props.get/index.js](https://github.com/jpcx/deep-props.get/blob/0.1.5/index.js), [line 282](https://github.com/jpcx/deep-props.get/blob/0.1.5/index.js#L282)
+=======
+| `host` | [deep-props.get~Host](https://github.com/jpcx/deep-props.get/blob/0.1.4/docs/global.md#~Host) |  |  | Container to search within. |
+| `path` | [deep-props.get~Path](https://github.com/jpcx/deep-props.get/blob/0.1.4/docs/global.md#~Path) |  |  | Path to desired property. |
+| `opt` | [deep-props.get~Options](https://github.com/jpcx/deep-props.get/blob/0.1.4/docs/global.md#~Options) | \<optional> | {} | Execution settings. |
+
+Source:
+
+*   [deep-props.get/index.js](https://github.com/jpcx/deep-props.get/blob/0.1.4/index.js), [line 282](https://github.com/jpcx/deep-props.get/blob/0.1.4/index.js#L282)
+>>>>>>> 2a7da931740770b8415775032c0464f50496eb7a
 
 ##### Returns:
 
@@ -256,13 +279,21 @@ Endpoint of path - the result of the search. Target is undefined if not found. I
 
 Type
 
+<<<<<<< HEAD
 [deep-props.get~Target](https://github.com/jpcx/deep-props.get/blob/0.1.5/docs/global.md#~Target) | [deep-props.get~ResultGenerator](https://github.com/jpcx/deep-props.get/blob/0.1.5/docs/global.md#~ResultGenerator)
+=======
+[deep-props.get~Target](https://github.com/jpcx/deep-props.get/blob/0.1.4/docs/global.md#~Target) | [deep-props.get~ResultGenerator](https://github.com/jpcx/deep-props.get/blob/0.1.4/docs/global.md#~ResultGenerator)
+>>>>>>> 2a7da931740770b8415775032c0464f50496eb7a
 
 #
 
 ## Versioning
 
+<<<<<<< HEAD
 Versioned using [SemVer](http://semver.org/). For available versions, see the [Changelog](https://github.com/jpcx/deep-props.get/blob/0.1.5/CHANGELOG.md).
+=======
+Versioned using [SemVer](http://semver.org/). For available versions, see the [Changelog](https://github.com/jpcx/deep-props.get/blob/0.1.4/CHANGELOG.md).
+>>>>>>> 2a7da931740770b8415775032c0464f50496eb7a
 
 ## Contribution
 
@@ -274,4 +305,8 @@ Please raise an issue if you find any. Pull requests are welcome!
 
 ## License
 
+<<<<<<< HEAD
 This project is licensed under the MIT License - see the [LICENSE](https://github.com/jpcx/deep-props.get/blob/0.1.5/LICENSE) file for details
+=======
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/jpcx/deep-props.get/blob/0.1.4/LICENSE) file for details
+>>>>>>> 2a7da931740770b8415775032c0464f50496eb7a

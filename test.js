@@ -1394,7 +1394,7 @@ tests.push(() => {
  *
  * @private
  * @exports run
- * @param   {deep-props.extract} module - Module to use for testing. Used when testing entire package.
+ * @param   {deep-props.get} module - Module to use for testing. Used when testing entire deep-props package.
  * @returns {TestResults} Results of tests.
  */
 const run = module => {
