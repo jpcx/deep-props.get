@@ -2,7 +2,7 @@
 
 /**
  * @author Justin Collier <jpcxme@gmail.com>
- * @see {@link http://github.com/jpcx/deepget|GitHub}
+ * @see {@link http://github.com/jpcx/deep-props.get|GitHub}
  * @license MIT
  */
 
@@ -1441,7 +1441,7 @@ const run = module => {
         process.stdout.write('\nExpected:\n')
         dirDeep(op.expect)
         process.stdout.write('\nResult:\n')
-        dirDeep(op.result())
+        dirDeep(result)
         if (assertion === true) {
           console.log(ANSI_GREEN + '[OK]' + ANSI_RESET)
         } else {
